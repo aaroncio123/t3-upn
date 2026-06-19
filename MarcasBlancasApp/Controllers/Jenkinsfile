@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    tools {
+        dotnet 'dotnet-sdk-8' // Asegúrate de que el nombre coincida con tu configuración de Jenkins
+    }
+    stages {
+        stage('Restore Dependencies') {
+            steps {
+                sh 'dotnet restore MarcasBlancasApp.sln'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'dotnet build MarcasBlancasApp.sln --configuration Release --no-restore'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'dotnet test MarcasBlancasApp.sln --no-build --verbosity normal'
+            }
+        }
+        stage('Publish') {
+            steps {
+                sh 'dotnet publish MarcasBlancasApp/MarcasBlancasApp.csproj --configuration Release --output ./publish --no-build'
+            }
+        }
+    }
+}

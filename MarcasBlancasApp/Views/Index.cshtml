@@ -1,0 +1,43 @@
+@model IEnumerable<MarcasBlancasApp.Models.MarcaBlanca>
+
+@{
+    ViewData["Title"] = "Catálogo de Marcas Blancas";
+}
+
+<style>
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+    .card {
+        border: 1px solid #dee2e6;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <p>Explore nuestro catálogo de marcas de distribuidor.</p>
+</div>
+
+<div class="card-container mt-5">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <img src="@item.ImagenUrl" class="card-img-top" alt="Imagen de @item.Nombre">
+            <div class="card-body">
+                <h5 class="card-title">@item.Nombre</h5>
+                <h6 class="card-subtitle mb-2 text-muted">@item.Categoria</h6>
+                <p class="card-text">@item.Descripcion</p>
+            </div>
+        </div>
+    }
+</div>
