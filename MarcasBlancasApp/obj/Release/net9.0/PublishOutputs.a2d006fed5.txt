@@ -1,0 +1,7 @@
+C:\T3\MarcasBlancasApp\bin\Release\net9.0\publish\MarcasBlancasApp.exe
+C:\T3\MarcasBlancasApp\bin\Release\net9.0\publish\appsettings.Development.json
+C:\T3\MarcasBlancasApp\bin\Release\net9.0\publish\appsettings.json
+C:\T3\MarcasBlancasApp\bin\Release\net9.0\publish\MarcasBlancasApp.dll
+C:\T3\MarcasBlancasApp\bin\Release\net9.0\publish\MarcasBlancasApp.deps.json
+C:\T3\MarcasBlancasApp\bin\Release\net9.0\publish\MarcasBlancasApp.runtimeconfig.json
+C:\T3\MarcasBlancasApp\bin\Release\net9.0\publish\MarcasBlancasApp.pdb
